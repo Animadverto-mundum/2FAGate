@@ -1,0 +1,13 @@
+services:
+  auth:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:18080:8080"
+    environment:
+      # - ISSUER=MySite       # name shown in authenticator app (default: hostname)
+      # - TOTP_SKEW=1         # tolerates ±N time periods (default: 1)
+      # - TOTP_ANTI_REPLAY=true  # reject reused codes (default: true)
+      - COOKIE_MAX_AGE=2592000  # seconds, 0 = never expires (default: 30d)
+    volumes:
+      - /etc/hostname:/etc/hostname:ro
