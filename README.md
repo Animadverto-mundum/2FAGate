@@ -28,7 +28,7 @@ All keys auto-generated on first run. Zero manual config.
 ### 2. Scan QR
 
 ```bash
-docker logs totp-auth_auth_1
+docker compose logs auth
 ```
 
 ASCII QR code printed in terminal — scan with Google Authenticator, Authy, etc.

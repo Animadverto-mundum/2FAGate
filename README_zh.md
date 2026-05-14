@@ -28,7 +28,7 @@ docker compose up -d
 ### 2. 扫码
 
 ```bash
-docker logs totp-auth_auth_1
+docker compose logs auth
 ```
 
 终端打印 ASCII 二维码，用 Authenticator App 扫码。
